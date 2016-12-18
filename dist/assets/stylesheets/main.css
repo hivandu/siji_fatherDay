@@ -1,0 +1,340 @@
+/*************************************/
+/* Reset */
+/*************************************/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1);
+}
+html {
+  height: 100%;
+  font-family: "microsoft yahei", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body {
+  height: 100%;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+p,
+a,
+button,
+span {
+  -webkit-font-smoothing: antialiased;
+}
+input {
+  outline: none;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+/*************************************/
+/* Main */
+/*************************************/
+.hide {
+  display: none;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.swiper-slide img {
+  opacity: 0;
+  position: absolute;
+}
+/* scene */
+.scene {
+  height: 100%;
+  background-size: 100% 100%!important;
+  background-size: cover;
+}
+/* audio */
+#audio {
+  display: none;
+  position: absolute;
+  left: -5000px;
+}
+/* animation */
+@-webkit-keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounceInDown2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounceInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounceInTop1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0px, 0);
+    opacity: 1;
+  }
+}
+#iSlider-arrow {
+  position: absolute;
+  width: 1.1em;
+  height: 1.1em;
+  left: 0;
+  right: 0;
+  bottom: 8%;
+  margin: 0 auto;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  z-index: 10000;
+  opacity: 1;
+  -webkit-animation: nextPage 1.2s linear infinite;
+}
+@-webkit-keyframes nextPage {
+  0% {
+    -webkit-transform: translateY(40px) rotate(-45deg);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+/* bg */
+.scene00 {
+  background: url('../images/bg01.png');
+}
+.scene01 {
+  background: url('../images/bg01.png');
+}
+.scene02 {
+  background: url('../images/bg01.png');
+}
+.scene03 {
+  background: url('../images/bg01.png');
+}
+.scene04 {
+  background: url('../images/bg01.png');
+}
+.scene05 {
+  background: url('../images/bg01.png');
+}
+.scene06 {
+  background: url('../images/bg01.png');
+}
+/* scene 01 */
+.scene01 .img1 {
+  z-index: 1;
+}
+.scene01 .img2 {
+  z-index: 0;
+}
+.scene02 .img1 {
+  z-index: 0;
+}
+.scene02 .img2 {
+  z-index: 1;
+  top: 200px;
+  top: 160px;
+  left: 70px;
+}
+.scene03 .img1 {
+  z-index: 1;
+  top: 80px;
+  left: 160px;
+}
+.scene03 .img2 {
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+}
+.scene05 .img1 {
+  z-index: 1;
+  top: 200px;
+}
+.scene05 .img2 {
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+}
+.Logo {
+  bottom: 8.2%;
+  left: 50%;
+  margin-left: -70px;
+  opacity: 1!important;
+}
+.btn {
+  bottom: 17.3%;
+  left: 0;
+  opacity: 1!important;
+}
+.btn_l {
+  position: absolute;
+  height: 13%;
+  width: 50%;
+  bottom: 17.3%;
+  left: 0;
+  z-index: 10;
+}
+.btn_r {
+  position: absolute;
+  height: 13%;
+  width: 50%;
+  left: 50%;
+  z-index: 10;
+  bottom: 17.3%;
+}
+.text-01 {
+  top: 26.3%;
+  left: 50%;
+  margin-left: -44px;
+}
+.scene00.active .text-01 {
+  -webkit-animation: bounceInTop 3s 1;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene00.active .s00-1 {
+  -webkit-animation: bounceInTop1 3s 1;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene00.active .s00-2 {
+  -webkit-animation: bounceInTop1 3s 1;
+  -webkit-animation-delay: 3.3s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene00.active .s00-3 {
+  -webkit-animation: bounceInTop1 3s 1;
+  -webkit-animation-delay: 4.4s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene.active .img1 {
+  -webkit-animation: bounceInDown 3s 1;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene.active .img2 {
+  -webkit-animation: bounceInTop 4s 1;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene.active .fz_text {
+  -webkit-animation: bounceInTop 4s 1;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene.active .weima {
+  z-index: 101;
+  -webkit-animation: bounceInTop 3s 1;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene03.active .img1 {
+  -webkit-animation: bounceInDown2 3s 1;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene03.active .img2 {
+  -webkit-animation: bounceInTop 4s 1;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene03.active .fz_text {
+  -webkit-animation: bounceInTop 4s 1;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene04.active .img2 {
+  -webkit-animation: bounceInTop 4s 1;
+  -webkit-animation-fill-mode: forwards;
+}
+.scene04.active .fz_text {
+  -webkit-animation: bounceInTop 2s 1;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+.fz_text {
+  left: 180px;
+  bottom: 100px;
+}
+.scene06bg {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  z-index: 9;
+}
+.alert {
+  opacity: 1!important;
+  display: none;
+  z-index: 10;
+  top: 10px;
+  right: 10px;
+}
+/* scene 07 */
+.scene06.active .fz_text {
+  -webkit-animation: bounceInTop 2s 1;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+.zindex2 {
+  z-index: 3;
+  display: none;
+}
+.w100 {
+  width: 320px!important;
+}
+/* share */
+.share {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+}
+/*************************************/
+/* Responsive */
+/*************************************/
